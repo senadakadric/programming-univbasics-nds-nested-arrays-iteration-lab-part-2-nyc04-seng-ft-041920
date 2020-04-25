@@ -9,7 +9,11 @@ def find_min_in_nested_arrays(src)
     inner_count = 0
     minimum_value = src[outer_count][0]
     while inner_count < src[outer_count].length
-
+      if src[outer_count][inner_count] < minimum_value
+        minimum_value = src[outer_count][inner_count]
+      end
+      inner_count +=1
+    end
 
   outer_count +=1
   end
